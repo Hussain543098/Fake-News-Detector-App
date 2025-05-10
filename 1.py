@@ -5,6 +5,7 @@ import torch
 import joblib
 import numpy as np
 import torch.nn as nn
+import os
 
 
 # -------------------- Load Models --------------------
@@ -21,7 +22,10 @@ def load_ml_models():
     models = {}
     for name in ml_model_names:
         path = f"{name}.pkl"
-        models[name] = joblib.load(path)
+        if os.path.exists(path):
+            models[name] = joblib.load(path)
+        else:
+            st.error(f"Model file {path} not found!")
     return models
 
 
