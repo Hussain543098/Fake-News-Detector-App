@@ -1,0 +1,7 @@
+streamlit
+torch
+transformers
+Pillow
+joblib
+xgboost
+numpy
