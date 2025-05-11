@@ -5,4 +5,4 @@ Pillow
 joblib
 xgboost
 numpy
-pickle
+pickle-mixin
